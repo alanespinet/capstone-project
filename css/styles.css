@@ -344,8 +344,6 @@ body {
 }
 
 /* ************************ MEDIAS SKILLS ******************************** */
-/* sm */
-
 
 /* md */
 @media (min-width: 992px) {
@@ -360,18 +358,129 @@ body {
 }
 
 /* lg */
-@media (min-width: 1200px) {
 
+
+
+/* ========================= WORK STYLES ================================ */
+#work {
+  background-image: url('../img/back2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#works-content {
+  padding: 50px 20px;
+}
+
+.owl-carousel .work-item {
+  background-color: rgba(255, 255, 255, .7);
+  border-radius: 20px;
+}
+
+.owl-carousel .work-item img {
+  padding-top: 30px;
+}
+
+.owl-carousel .work-item .work-info {
+  padding: 20px 40px;
+}
+
+.owl-carousel .work-item .work-info p {
+  font-family: 'Wire One', sans-serif;
+  font-size: 1.7rem;
+  margin: 0;
+  padding: 0;
+  text-align: justify;
+}
+
+.owl-carousel .work-item .work-info p b {
+  color: #a94646;
+}
+
+.owl-carousel .work-item .work-info p {
+  line-height: 1.2;
+}
+
+.owl-carousel .owl-nav {
+  text-align: left !important;
+  display: inline-block;
+}
+
+.owl-carousel .owl-dots {
+  float: right;
+  margin-top: 25px;
+  position: relative;
+  right: 10px;
+  display: none;
+}
+
+.owl-carousel .owl-dot.active > span,
+.owl-carousel .owl-dot > span:hover,
+.owl-carousel .owl-dot:hover > span  {
+  background: #ffd700 !important;
+}
+
+.owl-carousel .owl-nav .owl-prev,
+.owl-carousel .owl-nav .owl-next {
+  display: inline-block;
+  margin: 0 !important;
+  margin-left: 15px;
+  font-family: 'Wire One', sans-serif;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: white;
+  transition: color .3s ease;
+  background-color: transparent;
+}
+
+.owl-carousel .owl-nav .owl-prev:hover,
+.owl-carousel .owl-nav .owl-next:hover {
+  color: #ffd700;
+  background-color: transparent;
+}
+
+.owl-carousel .work-item a {
+  text-decoration: none;
+}
+
+/* ************************ MEDIAS WORK ******************************** */
+@media (min-width: 992px) {
+  .owl-carousel .work-item img {
+    padding-bottom: 30px;
+    padding-left: 30px;
+  }
+
+  .owl-carousel .owl-dots {
+    display: block;
+  }
 }
 
 
 
+/* ========================= ABOUT STYLES =============================== */
+#about {
+  background-color: #333;
+}
 
+#about .section-header,
+#about .section-header h1 {
+  width: 200px;
+}
 
+#my-photo {
+  border-radius: 100%;
+  opacity: .8;
+  margin: 50px 0 10px 0;
+}
 
-
-
-
+#about .description {
+  color: #ececec;
+  font-family: 'Wire One', sans-serif;
+  font-size: 1.7rem;
+  text-align: justify;
+  margin: 30px 0;
+}
 
 
 
