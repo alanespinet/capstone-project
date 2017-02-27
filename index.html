@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title> WRITE YOUR TITLE HERE </title>
+
+  <!-- vendor css -->
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap-theme.min.css" />
+  <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css" />
+
+  <!-- own css -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- content here -->
+  <div id="general-container">
+
+    <!-- model used to check correct width in JavaScript -->
+    <div id="width-model"></div><!-- /#width-model -->
+
+
+    <!-- MENU -->
+    <!-- menu button -->
+    <div id="main-menu-button-wrapper">
+      <div class="menu-icon-bar" id="first-icon-bar"></div>
+      <div class="menu-icon-bar" id="second-icon-bar"></div>
+      <div class="menu-icon-bar" id="third-icon-bar"></div>
+    </div>
+
+    <!-- menu list -->
+    <div id="main-menu-wrapper">
+      <ul id="main-menu-list">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#about">About me</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- HOME -->
+    <section id="home">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 text-center" id="home-title">
+            <h1>Alan Espinet</h1>
+          </div><!-- /.col8 -->
+
+          <div class="col-xs-2 col-xs-offset-5 home-line"></div> <!-- line -->
+          <div class="col-xs-12 text-center" id="home-welcome">
+            <h3>...welcome to my page...</h3>
+          </div><!-- /.col6 -->
+          <div class="col-xs-2 col-xs-offset-5 home-line"></div> <!-- line -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /#home -->
+
+
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="section-header">
+        <h1>Skills</h1>
+      </div>
+
+
+      <div class="container outer-container">
+        <div class="row">
+          <div class="col-xs-12 col-md-4 col-md-offset-2" id="skills-menu-wrapper">
+            <ul id="skills-menu">
+              <!-- general programming  -->
+              <li class="skill-group">General Programming
+                <ul class="skill-list" recordedHeight="96px" infoId="1">
+                  <li>C/C++</li>
+                  <li>Java</li>
+                  <li>C# and .NET</li>
+                  <li>VB</li>
+                  <li>DB Handling with SQL Server</li>
+                </ul>
+              </li>
+
+              <!-- front end development -->
+              <li class="skill-group">Front End Development
+                <ul class="skill-list" recordedHeight="134px" infoId="2">
+                  <li>HTML5 <span>,</span></li>
+                  <li>CSS3 <span>,</span></li>
+                  <li>JavaScript <span>,</span></li>
+                  <li>jQuery <span>,</span></li>
+                  <li>AngularJS <span>,</span></li>
+                  <li>Bootstrap <span>,</span></li>
+                  <li>Materialize <span>,</span></li>
+                  <li>Responsive Design</li>
+                </ul>
+              </li>
+
+              <!-- back end development -->
+              <li class="skill-group">Back End Development
+                <ul class="skill-list" recordedHeight="134px" infoId="3">
+                  <li>PHP</li>
+                  <li>DB handling with MySQL</li>
+                  <li>ASP.NET and ADO.NET</li>
+                  <li>NodeJS</li>
+                  <li>Wordpress</li>
+                </ul>
+              </li>
+
+              <!-- videogames development -->
+              <li class="skill-group">Videogames Development
+                <ul class="skill-list" recordedHeight="96px" infoId="4">
+                  <li>Unity3D</li>
+                  <li>C# and JavaScript for Unity3D</li>
+                </ul>
+              </li>
+            </ul>
+          </div><!-- /#skills-menu-wrapper -->
+
+          <div class="col-md-6 hidden-xs hidden-sm" id="skills-list-explanation">
+            
+          </div>
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /#skills -->
+
+  </div><!-- /#general-container -->
+
+  <!-- vendor js -->
+  <script src="vendor/jquery/jquery.min.js" charset="utf-8"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js" charset="utf-8"></script>
+  <script src="vendor/gsap/TweenMax.min.js" charset="utf-8"></script>
+
+  <!-- own js -->
+  <script src="js/custom-behavior.js" charset="utf-8"></script>
+</body>
+</html>

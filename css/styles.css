@@ -1,0 +1,378 @@
+@font-face {
+  font-family: 'League Gothic';
+  src: url('../fonts/leaguegothic-regular-webfont.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/leaguegothic-regular-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/leaguegothic-regular-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/leaguegothic-regular-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/leaguegothic-regular-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Wire One';
+  src: url('../fonts/WireOne.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/WireOne.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/WireOne.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/WireOne.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/WireOne.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/WireOne.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+/* /////////////////////////// FONTS ////////////////////////////////////// */
+
+/* ========================= GENERAL STYLES =============================== */
+html {
+    font-size: 16px;
+}
+
+
+/* position: fixed and width:100% in body helps the overflow-x in mobile */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+#general-container {
+  overflow-x: hidden;
+}
+
+/* ******************** TO MATCH CSS AND JS WIDTHS ************************ */
+#width-model {
+  background-color: red;
+}
+
+@media (min-width: 768px) {
+  #width-model { background-color: orange; }
+}
+
+@media (min-width: 992px) {
+  #width-model { background-color: yellow; }
+}
+
+@media (min-width: 1200px) {
+  #width-model { background-color: green; }
+}
+/* ******************* /TO MATCH CSS AND JS WIDTHS/ *********************** */
+
+
+/* ========================= HOME STYLES ================================== */
+#home {
+  height: 100vh;
+  background-image: url('../img/back.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+}
+
+#home .container {
+  height: 70vh;
+  display: flex;
+  align-items: center;
+}
+
+#home .container .row {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#home-title h1,
+#home-welcome h3 {
+  color: white;
+  font-family: 'League Gothic', sans-serif;
+}
+
+#home-title h1 {
+  font-size: 5rem;
+  letter-spacing: 1px;
+}
+
+#home-welcome h3 {
+  font-size: 1.3rem;
+  letter-spacing: 3px;
+  margin: 5px 0;
+}
+
+#home .home-line {
+  border-top: 2px solid white;
+}
+
+
+/* ************************ MEDIAS HOME *********************************** */
+/* sm */
+@media (min-width: 768px) {
+  #home-title h1 {
+    font-size: 6rem;
+    letter-spacing: 3px;
+  }
+
+  #home-welcome h3 {
+    font-size: 1.8rem;
+    letter-spacing: 3px;
+    margin: 10px 0;
+  }
+}
+
+/* md */
+@media (min-width: 992px) {
+  #home-title h1 {
+    font-size: 6.5rem;
+    letter-spacing: 3px;
+  }
+
+  #home-welcome h3 {
+    font-size: 2.0rem;
+    letter-spacing: 3px;
+    margin: 10px 0;
+  }
+}
+
+/* lg */
+@media (min-width: 1200px) {
+  #home .container {
+    align-items: flex-end;
+  }
+
+  #home-title h1 {
+    font-size: 8rem;
+    letter-spacing: 5px;
+  }
+
+  #home-welcome h3 {
+    font-size: 2.8rem;
+    letter-spacing: 3px;
+    margin: 15px 0;
+  }
+}
+
+
+/* ========================= MENU STYLES ================================== */
+#main-menu-wrapper {
+  position: fixed;
+  right: 0;
+
+  background-color: #333;
+  opacity: .8;
+  width: 270px;
+
+  z-index: 100;
+  height: 100vh;
+  padding-right: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  -ms-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+
+  transition: all .3s ease-out;
+}
+
+#main-menu-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: right;
+
+  font-family: 'Wire One', sans-serif;
+  font-size: 2.8rem;
+}
+
+#main-menu-list li a {
+  color: white;
+}
+
+#main-menu-list li a:link,
+#main-menu-list li a:visited,
+#main-menu-list li a:active {
+  text-decoration: none;
+}
+
+#main-menu-list li a:hover {
+  text-decoration: underline;
+}
+
+#main-menu-button-wrapper {
+  position: fixed;
+  padding: 10px;
+  right: 0;
+  z-index: 200;
+}
+
+#main-menu-button-wrapper:hover {
+  cursor: pointer;
+}
+
+.menu-icon-bar {
+  background-color: white;
+  width: 30px;
+  height: 4px;
+  margin: 5px 0;
+  transition: all .3s ease-out;
+  border-radius: 2px;
+}
+
+
+/* ========================= SKILLS STYLES ================================ */
+#skills {
+  height: 550px;
+  background-color: #333;
+  position: relative;
+}
+
+.section-header h1 {
+  font-family: 'Wire One', sans-serif;
+  font-size: 3rem;
+  margin: 0;
+  color: #fff;
+  padding: 15px 15px 0px 35px;
+  border-bottom: 1px solid #fff;
+  width: 145px;
+}
+
+#skills ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#skills .outer-container {
+  width: 100%;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+
+  -ms-transform: translateY(-45%);
+  -webkit-transform: translateY(-45%);
+  transform: translateY(-45%);
+}
+
+#skills .outer-container .row,
+#skills-menu-wrapper {
+  height: 400px;
+}
+
+#skills-menu-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+#skills  #skills-menu > li {
+  position: relative;
+  left: 40px;
+}
+
+#skills  #skills-menu > li .skill-list {
+  position: relative;
+  left: -40px;
+  padding: 0 30px;
+  margin-top: 5px;
+
+  font-size: 1.7rem;
+  background-color: #fff;
+
+  transition: all .3s ease;
+  height: 0;
+}
+
+#skills-menu li {
+  font-family: 'Wire One', sans-serif;
+}
+
+#skills-menu li.skill-group {
+  color: white;
+  font-size: 2rem;
+  padding: 5px 0;
+  letter-spacing: 2px;
+}
+
+#skills-menu li.skill-group:hover {
+  color: #ffd700;
+  cursor: pointer;
+}
+
+#skills-menu .skill-list > li {
+  display: inline-block;
+}
+
+#skills-menu .skill-list > li:first-child {
+  margin-top: 10px;
+}
+
+#skills-menu .skill-list > li:last-child {
+  margin-bottom: 10px;
+}
+
+#skills-menu .skill-list > li > span {
+  margin-right: 10px;
+}
+
+#skills-menu .skill-list > li {
+  color: #333;
+}
+
+#skills-menu {
+  width: 100%;
+}
+
+
+
+#skills-list-explanation {
+  background-color: #fff;
+  height: 400px;
+  padding: 50px;
+
+  display: flex;
+  align-items: center;
+}
+
+#skills-list-explanation div {
+  opacity: 0;
+}
+
+#skills-list-explanation .explanation-text {
+  font-family: 'Wire One';
+  font-weight: bold;
+  font-size: 1.6rem;
+  text-align: justify;
+}
+
+#skills-list-explanation .explanation-text  span {
+  color: #c18686;
+}
+
+/* ************************ MEDIAS SKILLS ******************************** */
+/* sm */
+
+
+/* md */
+@media (min-width: 992px) {
+  #skills  #skills-menu > li .skill-list {
+    font-size: 1.6rem;
+    padding: 0 15px 0 40px;
+    margin-left: -57%;
+
+    position: relative;
+    left: -25px;
+  }
+}
+
+/* lg */
+@media (min-width: 1200px) {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/**/
