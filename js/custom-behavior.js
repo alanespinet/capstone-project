@@ -18,6 +18,13 @@
     $('#skills-list-explanation div').css('opacity', '1');
   });
 
+  // **************************** HOME ********************************** //
+  if(checkScreenSize() === 'md' || checkScreenSize() === 'lg'){
+    $(window).on('load', function(){
+      TweenMax.to('#home .row', 4, { paddingBottom: 60, ease: Power3.easeOut } );
+    });
+  }
+
   // *************************** MENU *********************************** //
   var isMenuVisible = false;
   $('#main-menu-button-wrapper').on('click', function(){
@@ -121,5 +128,34 @@
         TweenMax.to('#skills-list-explanation div', 1, {opacity: 1});
       }
 
+  });
+
+
+  //============================ MENU ======================================
+  // for animating scroll
+  var targetDivs = {
+    'Home': '#home',
+    'Skills': '#skills',
+    'Work': '#work',
+    'About me': '#about',
+    'Contact': '#contact'
+  }
+
+  $('#main-menu-list a').on('click', function(e){
+
+    // animating scroll on large screens
+    if(checkScreenSize() === 'md' || checkScreenSize() === 'lg'){
+      e.preventDefault();
+
+      var offsetTo = ($(targetDivs[$(this).text()])[0]).offsetTop;
+      $('body').stop().animate({ scrollTop: offsetTo }, 300);
+    }
+
+    // auto close menu on click item
+    $('#main-menu-wrapper').css('transform', 'translateX(100%)');
+    $('#second-icon-bar').css('opacity', '1');
+    $('#first-icon-bar').css('transform', 'rotate(0) translateY(0)');
+    $('#third-icon-bar').css('transform', 'rotate(0) translateY(0)');
+    isMenuVisible = false;
   });
 })();
